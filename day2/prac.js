@@ -228,6 +228,38 @@
 // console.log(max)
 
 
-const words = ["hello" , "how" , "Are" , "you"]
-const join = words.reduce((acc,curr) => acc + " " + curr , )
-console.log(join)
+// const words = ["hello" , "how" , "Are" , "you"]
+// const join = words.reduce((acc,curr) => acc + " " + curr , )
+// console.log(join)
+
+
+
+// Curry Function
+// function add (a,b,c){
+//     return a+b+c
+// }
+// console.log(add(2,3,4))
+
+
+// function add(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
+// console.log(add(2)(3)(5))
+
+
+
+function sendautoemail(to){
+    return function(subject){
+        return function(body){
+            console.log(`sending email to ${to} with subject ${subject} and ${body}`)
+        }
+    }
+}
+
+let step1 = sendautoemail("hello@email.com")
+let step2 = step1("regarding confirmation mail of sign up")
+step2("this is a proctored mail sent")
