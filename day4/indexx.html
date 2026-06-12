@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="type something">
+    <button id="btn">click me</button>
+    <ul id="list1">
+
+    </ul>
+
+
+    <script>
+        const input1 = document.getElementById("input1")
+        const btn = document.getElementById("btn")
+        btn.addEventListener(
+            "click",()=>{
+                list1.innerHTML=input1
+            }
+        )
+        const list1 = document.getElementById("list1")
+        list1.appendChild("input1")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>my clg is very good</h1>
+    <button class="btn">submit it</button> -->
+    <!-- <h1 id="heading1">this is me</h1>
+    <div id="box"></div> -->
+
+    <button id="btn-main">click me</button>
+
+    <input id="input1" type="text">
+
+    <!-- <ul id="list1">
+        
+    </ul> -->
+    <script>
+        // const heading = document.querySelectorAll("h1")
+        // console.log(heading)
+        // const btn = document.querySelector("li")
+        // console.log(btn)
+        // console.log(btn.parentElement)
+
+        // for changing text content
+        // const heading1 = document.getElementById("heading1")
+        // heading1.textContent= "hello this is mehak"
+
+        //inner html
+        // const box = document.getElementById("box")
+        // box.innerHTML=`<p>hello my name is mehak i play badminton .......</p><br>
+        // <button>submit now</button>`
+
+        //create element
+        // const list1 = document.getElementById("list1")
+        // const li = document.createElement("li")
+        // li.textContent = "my value is ac"
+        // list1.appendChild(li)
+
+        const btn = document.getElementById("btn-main")
+        btn.addEventListener(
+            "click",()=>{
+                console.log("button pressed")
+            }
+        )
+
+        const inp = document.getElementById("input1")
+        inp.addEventListener(
+            "input",()=>{
+                console.log("key pressed")
+            }
+        )
+    </script>
+</body>
+</html>
