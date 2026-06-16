@@ -1,0 +1,73 @@
+<!-- // Q32 
+// Create stopwatch. 
+// Start 
+// Pause 
+// Reset  -->
+
+<h1 id="display">00:00:00</h1>
+
+<button onclick="startWatch()">Start</button>
+<button onclick="pauseWatch()">Pause</button>
+<button onclick="resetWatch()">Reset</button>
+
+<script>
+let seconds = 0;
+let timer = null;
+
+function updateDisplay() {
+    let hrs = Math.floor(seconds / 3600);
+    let mins = Math.floor((seconds % 3600) / 60);
+    let secs = seconds % 60;
+
+    document.getElementById("display").innerText =
+        String(hrs).padStart(2, '0') + ":" +
+        String(mins).padStart(2, '0') + ":" +
+        String(secs).padStart(2, '0');
+}
+
+function startWatch() {
+    if (!timer) {
+        timer = setInterval(() => {
+            seconds++;
+            updateDisplay();
+        }, 1000);
+    }
+}
+
+function pauseWatch() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function resetWatch() {
+    clearInterval(timer);
+    timer = null;
+    seconds = 0;
+    updateDisplay();
+}
+</script>
+
+
+
+
+<!-- // Q35 
+// Create typing effect animation. 
+// Example: 
+// Hello World 
+// One character at a time. -->
+
+<h1 id="text"></h1>
+
+<script>
+let message = "Hello World";
+let index = 0;
+
+function typeEffect() {
+    if (index < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(index);
+        index++;
+    }
+}
+
+setInterval(typeEffect, 200);
+</script>
